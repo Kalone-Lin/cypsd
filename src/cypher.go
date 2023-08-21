@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-var key = "redis-dts"
+var key = "4321dfgsgf4512"
 
 func generateKey(key []byte) (genKey []byte) {
 	genKey = make([]byte, 16)

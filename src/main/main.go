@@ -2,12 +2,11 @@ package main
 
 import (
 	"cypsd/src"
-	"encoding/json"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func main_() {
+func main() {
 	var (
 		dsn       = ""
 		tableName = ""
@@ -42,47 +41,4 @@ func main_() {
 	}
 
 	fmt.Printf("===============finished==================\n")
-}
-
-func main__() {
-	var array1 = []int{1, 2, 3}
-	ans := permute(array1)
-	fmt.Printf("%v \n", ans)
-}
-
-func permute(nums []int) (ans [][]int) {
-	n := len(nums)
-	path := make([]int, n)
-	onPath := make([]bool, n)
-	var dfs func(int)
-	dfs = func(i int) {
-		if i == n {
-			ans = append(ans, append([]int(nil), path...))
-			return
-		}
-		for j, on := range onPath {
-			if !on {
-				path[i] = nums[j]
-				onPath[j] = true
-				dfs(i + 1)
-				onPath[j] = false
-			}
-		}
-	}
-	dfs(0)
-	return
-}
-
-type ser struct {
-	SerialId string
-}
-
-func main() {
-	str := "{\"SerialId\":\"crs-9giiojif\"}"
-	tmp := ser{}
-	err := json.Unmarshal([]byte(str), &tmp)
-	if err != nil {
-		fmt.Printf("-----------goggogg-------------:", err)
-	}
-	fmt.Printf("-----------success-------------")
 }
