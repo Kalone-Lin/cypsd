@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1fb26fd1-bd23-47e3-b9c6-a15c7e5cde11" name="cypsd">
+        <fileTransfer rootFolder="/root/workspace" accessType="SFTP" host="9.134.247.185" port="36000" sshConfigId="9d1265b4-02d8-4d53-9767-c64da5b498c1" sshConfig="root@9.134.247.185:36000 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
